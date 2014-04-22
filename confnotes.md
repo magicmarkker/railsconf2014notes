@@ -27,16 +27,18 @@
 
 ## Advanced AREL - When ActiveRecord Just Isn't Enough
 > Cameron Dutro @camertron
-    Posts.joins(:comments).joins(:comments => :author).where()
+````ruby
+  Posts.joins(:comments).joins(:comments => :author).where()
 
-    to
+becomes:
 
-    Post
-      .joins(:comments
-        .joins(Comment.joins(:author).join_sources)
-        .where(
+````ruby
+  Post
+    .joins(:comments
+      .joins(Comment.joins(:author).join_sources)
+      .where(
 
-        ))
+      ))
 * gem install arel-helpers
 ````ruby
   Post.select(Post[:visitors].sum.as('visitor_total')).to_sql
