@@ -27,6 +27,7 @@
 
 ## Advanced AREL - When ActiveRecord Just Isn't Enough
 > Cameron Dutro @camertron
+
 ````ruby
   Posts.joins(:comments).joins(:comments => :author).where()
 
