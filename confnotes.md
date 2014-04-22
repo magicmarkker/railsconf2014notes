@@ -29,20 +29,21 @@
 > Cameron Dutro @camertron
 
 ````ruby
-  Posts.joins(:comments).joins(:comments => :author).where()
+Posts.joins(:comments).joins(:comments => :author).where()
 
 becomes:
 
 ````ruby
-  Post
-    .joins(:comments
-      .joins(Comment.joins(:author).join_sources)
-      .where(
+Post
+  .joins(:comments
+    .joins(Comment.joins(:author).join_sources)
+    .where(
 
-      ))
+    ))
 
 ````ruby
-  Post.select(Post[:visitors].sum.as('visitor_total')).to_sql
+Post.select(Post[:visitors].sum.as('visitor_total')).to_sql
+
 
 * gem install arel-helpers
 * scuttle.io for sql to AREL
