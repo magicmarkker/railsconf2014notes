@@ -40,6 +40,9 @@ becomes:
       .where(
 
       ))
-* gem install arel-helpers
+
 ````ruby
   Post.select(Post[:visitors].sum.as('visitor_total')).to_sql
+
+* gem install arel-helpers
+* scuttle.io for sql to AREL
