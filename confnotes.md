@@ -30,6 +30,7 @@
 
 ````ruby
 Posts.joins(:comments).joins(:comments => :author).where()
+````
 
 becomes:
 
@@ -41,9 +42,8 @@ Post
 
     ))
 
-````ruby
 Post.select(Post[:visitors].sum.as('visitor_total')).to_sql
-
+````
 
 * gem install arel-helpers
 * scuttle.io for sql to AREL
