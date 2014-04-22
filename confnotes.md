@@ -5,7 +5,7 @@
   2. Know where you're going
   3. Be more than just a "Rails Developer"
 
-  > Reread blog post by code climate "7 ways to refactor fat models"
+  > Reread blog post by code climate ["7 ways to refactor fat models"](http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/)
 
   ### Hexagonal Architectures
     * Core App
@@ -19,5 +19,4 @@
         * Basically breaks everything on a model out to a class? OrderService, CustomerService, BillingService, etc.
 
  
-## Modeling on the right side of the brain       
-
+##
